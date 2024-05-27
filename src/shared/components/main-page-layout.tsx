@@ -160,8 +160,8 @@ export default function MainPageLayout() {
                         <div className="space-y-1 p-2.5">
                           <MenuItem>
                             {({ focus }) => (
-                              <a
-                                href="#"
+                              <Link
+                                to="#"
                                 className={`group flex items-center justify-between gap-2 rounded-lg border border-transparent px-2.5 py-2 text-sm font-medium ${
                                   focus
                                     ? "bg-blue-50 text-blue-800 dark:border-transparent dark:bg-gray-700/75 dark:text-white"
@@ -185,13 +185,13 @@ export default function MainPageLayout() {
                                 <div className="inline-flex rounded-full border border-blue-200 bg-blue-100 px-1.5 py-0.5 text-xs font-semibold leading-4 text-blue-700 dark:border-blue-700 dark:bg-blue-700 dark:text-blue-50">
                                   2
                                 </div>
-                              </a>
+                              </Link>
                             )}
                           </MenuItem>
                           <MenuItem>
                             {({ focus }) => (
-                              <a
-                                href="#"
+                              <Link
+                                to="#"
                                 className={`group flex items-center justify-between gap-2 rounded-lg border border-transparent px-2.5 py-2 text-sm font-medium ${
                                   focus
                                     ? "bg-blue-50 text-blue-800 dark:border-transparent dark:bg-gray-700/75 dark:text-white"
@@ -211,15 +211,15 @@ export default function MainPageLayout() {
                                 <div className="inline-flex rounded-full border border-blue-200 bg-blue-100 px-1.5 py-0.5 text-xs font-semibold leading-4 text-blue-700 dark:border-blue-700 dark:bg-blue-700 dark:text-blue-50">
                                   5
                                 </div>
-                              </a>
+                              </Link>
                             )}
                           </MenuItem>
                         </div>
                         <div className="space-y-1 p-2.5">
                           <MenuItem>
                             {({ focus }) => (
-                              <a
-                                href="#"
+                              <Link
+                                to="#"
                                 className={`group flex items-center justify-between gap-2 rounded-lg border border-transparent px-2.5 py-2 text-sm font-medium ${
                                   focus
                                     ? "bg-blue-50 text-blue-800 dark:border-transparent dark:bg-gray-700/75 dark:text-white"
@@ -240,13 +240,13 @@ export default function MainPageLayout() {
                                   />
                                 </svg>
                                 <span className="grow">Account</span>
-                              </a>
+                              </Link>
                             )}
                           </MenuItem>
                           <MenuItem>
                             {({ focus }) => (
-                              <a
-                                href="#"
+                              <Link
+                                to="#"
                                 className={`group flex items-center justify-between gap-2 rounded-lg border border-transparent px-2.5 py-2 text-sm font-medium ${
                                   focus
                                     ? "bg-blue-50 text-blue-800 dark:border-transparent dark:bg-gray-700/75 dark:text-white"
@@ -267,15 +267,15 @@ export default function MainPageLayout() {
                                   />
                                 </svg>
                                 <span className="grow">Settings</span>
-                              </a>
+                              </Link>
                             )}
                           </MenuItem>
                         </div>
                         <div className="space-y-1 p-2.5">
                           <MenuItem>
                             {({ focus }) => (
-                              <a
-                                href="#"
+                              <Link
+                                to="#"
                                 className={`group flex items-center justify-between gap-2 rounded-lg border border-transparent px-2.5 py-2 text-sm font-medium ${
                                   focus
                                     ? "bg-blue-50 text-blue-800 dark:border-transparent dark:bg-gray-700/75 dark:text-white"
@@ -296,7 +296,7 @@ export default function MainPageLayout() {
                                   />
                                 </svg>
                                 <span className="grow">Sign out</span>
-                              </a>
+                              </Link>
                             )}
                           </MenuItem>
                         </div>
