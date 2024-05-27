@@ -3,10 +3,12 @@ import MainPageLayout from "./main-page-layout";
 import SignInPage from "~/modules/auth/sign-in/sign-in.page";
 import SignUpPage from "~/modules/auth/sign-up/sign-up.page";
 import ForgotPasswordPage from "~/modules/auth/forgot-password/forgot-password.page";
+import NotFoundErrorPage from "~/shared/pages/not-found-error.page";
 
 const AppRouter = createBrowserRouter([
   {
     path: "/",
+    errorElement: <NotFoundErrorPage />,
     children: [
       {
         element: <MainPageLayout />,
@@ -16,8 +18,12 @@ const AppRouter = createBrowserRouter([
             element: <>Hello, From home!</>,
           },
           {
-            path: "/products",
+            path: "products",
             element: <>Hello, From products!</>,
+          },
+          {
+            path: "search",
+            element: <>Search...</>,
           },
         ],
       },
