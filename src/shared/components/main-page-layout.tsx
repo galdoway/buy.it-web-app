@@ -329,8 +329,10 @@ export default function MainPageLayout() {
                     {/* END Dropdown */}
                   </Menu>
                 ) : (
-                  <div className="flex gap-2">
-                    <Button size="sm">Sign In</Button>
+                  <div className="md:flex gap-2 hidden md:visible">
+                    <Link to={"/auth/sign-in"}>
+                      <Button size="sm">Sign In</Button>
+                    </Link>
                     <Button size="sm" variant="secondary">
                       Sign Up
                     </Button>
