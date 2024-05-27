@@ -1,6 +1,6 @@
 import { RouterProvider } from "react-router-dom";
 import { Fragment } from "react/jsx-runtime";
-import AppRouter from "~/shared/components/app-router";
+import AppRouter from "~/shared/app.router";
 
 function App() {
   return (
