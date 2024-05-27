@@ -1,0 +1,7 @@
+/* Fonts Imports */
+@import '@fontsource/inter';
+
+/* Tailwind.css Imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
