@@ -1,14 +1,12 @@
-import Button from "./shared/components/button";
+import { RouterProvider } from "react-router-dom";
+import { Fragment } from "react/jsx-runtime";
+import AppRouter from "~/shared/components/app-router";
 
 function App() {
   return (
-    <>
-      <div className="ml-4">
-        <Button variant="warning" size="xs">
-          Button
-        </Button>
-      </div>
-    </>
+    <Fragment>
+      <RouterProvider router={AppRouter} />
+    </Fragment>
   );
 }
 
