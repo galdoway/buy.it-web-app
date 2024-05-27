@@ -397,11 +397,24 @@ export default function MainPageLayout() {
         </header>
         {/* END Page Header */}
         {/* Page Content */}
-        <main id="page-content" className="flex max-w-full flex-auto flex-col">
-          <div className="container mx-auto p-4 lg:p-8 xl:max-w-7xl">
-            <Outlet />
-          </div>
-        </main>
+        <div
+          id="page-container"
+          className="mx-auto flex min-h-full w-full min-w-[320px] flex-col bg-gray-100 dark:bg-gray-900 dark:text-gray-100"
+        >
+          {/* Page Content */}
+          <main
+            id="page-content"
+            className="flex max-w-full flex-auto flex-col"
+          >
+            {/* Page Section */}
+            <div className="container mx-auto p-4 lg:p-8 xl:max-w-7xl">
+              {/* Placeholder */}
+              <Outlet />
+            </div>
+            {/* END Page Section */}
+          </main>
+          {/* END Page Content */}
+        </div>
         {/* END Page Content */}{" "}
       </div>
       {/* END Page Container */}
