@@ -1,7 +1,13 @@
+import Button from "./shared/components/button";
+
 function App() {
   return (
     <>
-      <h1>Hello, World!</h1>
+      <div className="ml-4">
+        <Button variant="warning" size="xs">
+          Button
+        </Button>
+      </div>
     </>
   );
 }
