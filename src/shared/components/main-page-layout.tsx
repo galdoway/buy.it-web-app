@@ -329,7 +329,7 @@ export default function MainPageLayout() {
                     {/* END Dropdown */}
                   </Menu>
                 ) : (
-                  <div className="md:flex gap-2 hidden md:visible">
+                  <div className="lg:flex gap-2 hidden lg:visible">
                     <Link to={"/auth/sign-in"}>
                       <Button size="sm">Sign In</Button>
                     </Link>
@@ -383,7 +383,13 @@ export default function MainPageLayout() {
                     <span>{item.text}</span>
                   </Link>
                 ))}
-                {!isAuthed && <Button size="sm">Sign In</Button>}
+                {!isAuthed && (
+                  <Button size="sm">
+                    <Link to={"/auth/sign-in"} className="block">
+                      Sign In
+                    </Link>
+                  </Button>
+                )}
               </nav>
             </div>
             {/* END Mobile Navigation */}

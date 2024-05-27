@@ -31,7 +31,7 @@ export default function SignInPage() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span>Buy.it</span>
+                  <span>Buy.it | Online Store</span>
                 </h1>
                 <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400">
                   Welcome, please sign in to your account
