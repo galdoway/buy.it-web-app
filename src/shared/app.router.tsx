@@ -23,6 +23,10 @@ const AppRouter = createBrowserRouter([
             element: <>Hello, From products!</>,
           },
           {
+            path: "products/:id",
+            element: <>Hello, From products and ID!</>,
+          },
+          {
             path: "search",
             element: <>Search...</>,
           },

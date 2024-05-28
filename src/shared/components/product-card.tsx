@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
 type Props = {
+  id: number;
   title: string;
   description?: string;
   price: number;
@@ -9,6 +11,7 @@ type Props = {
 };
 
 export default function ProductCard({
+  id,
   title,
   description,
   price,
@@ -46,7 +49,9 @@ export default function ProductCard({
               </svg>
             ))}
           </p>
-          <h3 className="mb-1 text-xl font-semibold">{title}</h3>
+          <Link to={`/products/${id}`}>
+            <h3 className="mb-1 text-xl font-semibold">{title}</h3>
+          </Link>
           <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
             {description}
           </p>

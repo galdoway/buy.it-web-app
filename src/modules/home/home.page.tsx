@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import { Toaster } from "sonner";
 import ImageOverlay from "~/shared/components/image-overlay";
 import LetterPullup from "~/shared/components/letter-pullup";
 import ProductCard from "~/shared/components/product-card";
@@ -59,13 +58,20 @@ export interface Review {
 }
 
 function HomePage() {
-  const { isLoading, data } = useQuery<GetProductsResponse>({
+  const { isLoading, data, isSuccess } = useQuery<GetProductsResponse>({
     queryKey: ["Products"],
     queryFn: async () => {
-      const resp = await fetch("https://dummyjson.com/products");
+      const resp = await fetch(
+        "https://dummyjson.com/products?limit=10&sortBy=rating&order=desc"
+      );
+      if (!resp.ok) {
+        throw new Error("Network response was not ok");
+      }
       return resp.json();
     },
   });
+
+  if (!isSuccess) return <>Products Can't be Loaded...</>;
 
   return (
     <>
@@ -84,16 +90,19 @@ function HomePage() {
             </>
           ) : (
             <>
-              {data?.products.map((item) => (
-                <ProductCard
-                  key={item.id}
-                  title={item.title}
-                  price={item.price}
-                  description={item.sku}
-                  rating={item.rating}
-                  thumbnail={item.images[0]}
-                />
-              ))}
+              {data?.products.map(
+                ({ id, title, price, sku, rating, images }) => (
+                  <ProductCard
+                    id={id}
+                    key={id}
+                    title={title}
+                    price={price}
+                    description={sku}
+                    rating={rating}
+                    thumbnail={images[0]}
+                  />
+                )
+              )}
             </>
           )}
         </div>
