@@ -6,6 +6,7 @@ import ForgotPasswordPage from "~/modules/auth/forgot-password/forgot-password.p
 import NotFoundErrorPage from "~/shared/pages/not-found-error.page";
 import HomePage from "~/modules/home/home.page";
 import ProductDetailsPage from "~/modules/products/details/product-details.page";
+import AllProductsPage from "~/modules/products/all/all-products.page";
 
 const AppRouter = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const AppRouter = createBrowserRouter([
           },
           {
             path: "products",
-            element: <>Hello, From products!</>,
+            element: <AllProductsPage />,
           },
           {
             path: "products/:id",
