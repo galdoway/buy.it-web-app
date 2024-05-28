@@ -58,7 +58,7 @@ export interface Review {
 }
 
 function HomePage() {
-  const { isLoading, data, isSuccess } = useQuery<GetProductsResponse>({
+  const { isLoading, data, isError } = useQuery<GetProductsResponse>({
     queryKey: ["Products"],
     queryFn: async () => {
       const resp = await fetch(
@@ -71,7 +71,7 @@ function HomePage() {
     },
   });
 
-  if (!isSuccess) return <>Products Can't be Loaded...</>;
+  if (isError) return <>Products Can't be Loaded...</>;
 
   return (
     <>
