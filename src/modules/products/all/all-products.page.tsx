@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { GetProductsResponse } from "~/modules/home/types";
 import Button from "~/shared/components/button";
-import LetterPullup from "~/shared/components/letter-pullup";
 import ProductCard from "~/shared/components/product-card";
 import ProductCardSkeleton from "~/shared/components/product-card-skeleton";
 
@@ -27,7 +26,9 @@ export default function AllProductsPage() {
   });
   return (
     <div>
-      <LetterPullup words="All Products" className="text-xl mb-4 lg:mb-0" />
+      <h6 className="font-display text-xl mb-4 lg:mb-0 font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-4xl md:leading-[5rem]">
+        All Products
+      </h6>
       <div className="my-4 grid gap-3 grid-cols-2">
         <div className="space-y-1">
           <label htmlFor="select" className="font-medium">
