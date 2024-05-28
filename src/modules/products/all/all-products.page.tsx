@@ -37,9 +37,8 @@ export default function AllProductsPage() {
             value={filterCriteria.sortBy}
             onChange={(e) =>
               setFilterCriteria({
+                ...filterCriteria,
                 sortBy: e.currentTarget.value,
-                limit: filterCriteria.limit,
-                order: filterCriteria.order,
               })
             }
             id="select"
@@ -59,8 +58,7 @@ export default function AllProductsPage() {
             value={filterCriteria.order}
             onChange={(e) =>
               setFilterCriteria({
-                sortBy: filterCriteria.sortBy,
-                limit: filterCriteria.limit,
+                ...filterCriteria,
                 order: e.currentTarget.value,
               })
             }
