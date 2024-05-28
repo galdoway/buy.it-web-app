@@ -11,6 +11,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import cn from "../utils/cn";
 import useAuthStore from "~/modules/auth/auth.store";
 import Button from "./button";
+import { Toaster } from "sonner";
 
 type NavigationLink = {
   text: string;
@@ -69,9 +70,9 @@ const links: NavigationLink[] = [
         aria-hidden="true"
       >
         <path
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
       </svg>
     ),
@@ -86,6 +87,7 @@ export default function MainPageLayout() {
   return (
     <>
       {/* Page Container */}
+      <Toaster richColors />
       <div
         id="page-container"
         className="mx-auto flex min-h-dvh w-full min-w-[320px] flex-col bg-gray-100 dark:bg-gray-900 dark:text-gray-100"
